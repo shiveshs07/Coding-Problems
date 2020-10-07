@@ -1,6 +1,6 @@
 t = int(input())
 a = list(map(int, input().split()))
-sa = a.sort()
+sa = sorted(a)
 temp1 = []
 temp2 = []
 for i, j in zip(a, sa):
