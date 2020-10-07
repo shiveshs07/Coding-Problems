@@ -1,12 +1,16 @@
-t = int(input())
-a = list(map(int, input().split()))
-sa = a.sort()
-temp1 = []
-temp2 = []
-for i, j in zip(a, sa):
-    if i == j:
-        temp1.append(i)
-    else:
-        temp2.append(i)
-print(sum(temp1) - sum(temp2))
+def diffInSum(arr):
+    sorted_arr = sorted(arr)
+    sum1 = sum2 = 0
+    for i, j in zip(arr, sorted_arr):
+        if i == j:
+            sum1 += i
+        else:
+            sum2 += i
+    return sum1 - sum2
 
+if __name__=="__main__":
+    T = int(input())
+    for _ in range(T):
+        arr = list(int, input().split())
+        result = diffInSum(arr)
+        print(res)
